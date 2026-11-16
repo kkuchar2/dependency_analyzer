@@ -77,7 +77,30 @@ maven-dep-graph -d ~/work -p ~/work/company-parent --maven-analyze \
 maven-dep-graph -d samples -p samples/parent-bom --maven-analyze
 ```
 
-Run without `-d`/`-p` for interactive prompts.
+### Interactive mode
+
+Run with no arguments:
+
+```bash
+maven-dep-graph
+```
+
+It asks for the projects directory, lets you pick the parent from the
+pom-packaged projects it finds, and asks for the mode (fast / maven /
+maven-analyze). After the analysis it writes the reports and opens a menu:
+
+```
+=== Menu ===
+  1) Summary
+  2) Findings
+  3) Project details
+  4) Libraries that could be removed (elimination)
+  5) Report files
+  q) Quit
+```
+
+Pass `-d`/`-p` to skip the questions; add `--non-interactive` (or pipe stdin)
+to just print the summary and exit, e.g. in CI.
 
 | Option | Meaning |
 |---|---|

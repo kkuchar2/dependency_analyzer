@@ -14,7 +14,7 @@ dependencies = []  # standard library only - on purpose
 dev = ["pytest>=8"]
 
 [project.scripts]
-maven-dep-graph = "maven_dep_graph.cli:main"
+maven-dep-graph = "maven_dep_graph.cli:run"
 
 [tool.setuptools.packages.find]
 where = ["src"]
