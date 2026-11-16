@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maven-dep-graph"
+version = "0.2.0"
+description = "Inventory and reduce the dependencies of a workspace of Maven projects sharing a parent POM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []  # standard library only - on purpose
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+maven-dep-graph = "maven_dep_graph.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]

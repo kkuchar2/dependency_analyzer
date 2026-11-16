@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Maven output of the sample projects
+target/
+
+# Default report output directory
+dependency-report/
+
+# IDEs
+.idea/
+.vscode/
+*.iml
